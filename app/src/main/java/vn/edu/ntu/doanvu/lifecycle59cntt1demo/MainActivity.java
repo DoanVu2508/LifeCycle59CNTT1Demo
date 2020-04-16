@@ -18,15 +18,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("LifeCycle", "onCreate called");
         txtTG = findViewById(R.id.txtTG);
-        SimpleDateFormat spf = new SimpleDateFormat("HH:mm:ss");
-        String strDate = spf.format(new Date());
-        txtTG.setText(strDate);
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         Log.d("LifeCycle", "onStart called");
+        SimpleDateFormat spf = new SimpleDateFormat("HH:mm:ss");
+        String strDate = spf.format(new Date());
+        txtTG.setText(strDate);
     }
 
     @Override
